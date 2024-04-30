@@ -21,8 +21,6 @@ class ArgumentService:
             object_array = filterHandler(object_array, args)
             displayHandler(object_array, args)
 
-        #print([obj['name'] for obj in object_array])
-
 
         
     
