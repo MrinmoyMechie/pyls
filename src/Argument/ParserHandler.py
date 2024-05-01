@@ -26,6 +26,9 @@ def parserhandler(data_array, data, args):
     filtered_args = [element for element in args if not element.startswith("-")]
     if len(filtered_args) == 0:
         return data_array
+    elif len(filtered_args) > 1:
+        print("error: Multiple file parser arguments")
+        sys.exit(1)
     for arg in filtered_args:
         parent = pathFinder(arg, data)
         if 'contents' not in parent.keys():

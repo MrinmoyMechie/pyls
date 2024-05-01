@@ -16,9 +16,14 @@ def inputfn():
     file_path, _ = QFileDialog.getOpenFileName(window, "Select File", "", "All Files (*)", options=options)
     return file_path
 
-if __name__ == "__main__":
 
+def main():
     #file_path = inputfn()
-    file_path = "structure.json"
+    file_path = "./src/structure.json"
     arguments = sys.argv
     argfn(arguments[1:], file_path)
+
+if __name__ == "__main__":
+    main()
+    
+
