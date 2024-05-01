@@ -18,12 +18,18 @@ def pathFinder(path, data):
         sequence = sequences.pop(0)
         parent = sequenceIsPresent(sequence, parent)
         if parent == None:
-            print("error: cannot access '{}': No such file or directory".format(path))
+            print("error: cannot access '{}': No such file or directory"\
+                  .format(path))
             sys.exit(1)
     return parent
 
 def parserhandler(data_array, data, args):
-    filtered_args = [element for element in args if not element.startswith("-")]
+
+    filtered_args = [element for element in args \
+                     if not element.startswith("-")]
+    filtered_args = [element[2:] if element.startswith("./") \
+                      else element for element in filtered_args]
+
     if len(filtered_args) == 0:
         return data_array
     elif len(filtered_args) > 1:

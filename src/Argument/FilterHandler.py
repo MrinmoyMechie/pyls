@@ -10,7 +10,8 @@ def filterHandler(data_array, args):
             if cur_filter_type in available_types:
                 available_types[cur_filter_type] = 1
             else:
-                print("error: '{}' is not a valid filter criteria. Available filters are 'dir' and 'file'".format(cur_filter_type))
+                print("error: '{}' is not a valid filter criteria. Available \
+filters are 'dir' and 'file'".format(cur_filter_type))
                 sys.exit(1)
     if count > 1:
         print("error: multiple filter")

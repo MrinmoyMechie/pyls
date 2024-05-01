@@ -13,7 +13,8 @@ def inputfn():
     window = QWidget()
     window.setWindowTitle('File Selection')
     options = QFileDialog.Options()
-    file_path, _ = QFileDialog.getOpenFileName(window, "Select File", "", "All Files (*)", options=options)
+    file_path, _ = QFileDialog.getOpenFileName(window, "Select File", "", "All\
+                                                Files (*)", options=options)
     return file_path
 
 

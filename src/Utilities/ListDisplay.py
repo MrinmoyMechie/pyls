@@ -16,7 +16,13 @@ def getSize(bytes):
 def listDisplay(data_array, args):
     if "-h" in args:
         for data in data_array:
-            print("{}\t{}\t{}\t{}".format(data['permissions'], getSize(data['size']), getDate(data['time_modified']), data['name']))
+            print("{}\t{}\t{}\t{}".format(data['permissions'], \
+                                          getSize(data['size']),\
+                                          getDate(data['time_modified']), \
+                                          data['name']))
     else:
         for data in data_array:
-            print("{}\t{}\t{}\t{}".format(data['permissions'], data['size'], getDate(data['time_modified']), data['name']))
+            print("{}\t{}\t{}\t{}".format(data['permissions'], \
+                                          data['size'], \
+                                          getDate(data['time_modified']),\
+                                          data['name']))
