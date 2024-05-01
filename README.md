@@ -37,10 +37,10 @@ pyls -t
 ## Filter files and directories within a directory
 pyls --filter=" ";  use either dir or file
 
-# Display file sizes in human-readable format
+## Display file sizes in human-readable format
 pyls -h
 
-# Display help message
+## Display help message
 pyls --help
 
 Contributing
